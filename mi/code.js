@@ -804,8 +804,7 @@ const initGraph = async () => {
     updateRadioButtons(dataViewElData, getStorageValue('current_data_group').join("_"));
   });
 
-
-  cy.on('click', 'node', function(evt){
+  cy.on('tap', 'node', function(evt){
     var node_data = this.data()
     cy.elements().removeClass("selected_node")
     this.addClass("selected_node")
